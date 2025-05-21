@@ -1,0 +1,42 @@
+[
+    {
+        "symbol": "LINK/USDT",
+        "weight": 0.148
+    },
+    {
+        "symbol": "EGLD/USDT",
+        "weight": 0.1045
+    },
+    {
+        "symbol": "OP/USDT",
+        "weight": 0.1023
+    },
+    {
+        "symbol": "ARB/USDT",
+        "weight": 0.0973
+    },
+    {
+        "symbol": "AAVE/USDT",
+        "weight": 0.096
+    },
+    {
+        "symbol": "SNX/USDT",
+        "weight": 0.0951
+    },
+    {
+        "symbol": "FTM/USDT",
+        "weight": 0.0926
+    },
+    {
+        "symbol": "ADA/USDT",
+        "weight": 0.091
+    },
+    {
+        "symbol": "INJ/USDT",
+        "weight": 0.0867
+    },
+    {
+        "symbol": "TRX/USDT",
+        "weight": 0.0865
+    }
+]

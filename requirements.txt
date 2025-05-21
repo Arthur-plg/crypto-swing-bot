@@ -1,0 +1,8 @@
+ccxt
+pandas
+numpy
+ta
+matplotlib
+mplfinance
+PyYAML
+scikit-learn
