@@ -48,8 +48,8 @@ Algorithme de swing trading basé sur une stratégie de **mean reversion** (reto
 ## Gestion des risques
 
 - Stop Loss (SL) et Trailing Stop (TS) basés sur l’**ATR** (avec paramètres k_ts=5, k_sl=3 testés en backtest).  
-- Risque par trade fixé à **1 % du capital** (pour l’instant, portefeuille de chaque crypto géré séparément).  
-
+- Sur main.py : risque par trade fixé à **1 % du capital** (pour l’instant, portefeuille de chaque crypto géré séparément).  
+- Sur main_multi.py : risque par trade fixé à **poids de la crypto dans le portefeuille**.
 ---
 
 ## Architecture du projet
@@ -61,7 +61,6 @@ Algorithme de swing trading basé sur une stratégie de **mean reversion** (reto
 
 ## À venir / améliorations
 
-- Portefeuille mutualisé avec pondération adaptée à la performance des cryptos.  
 - Intégration des canaux de Keltner.  
 - Ajout du MACD comme indicateur.  
 - Prise en compte du volume dans la stratégie.  
