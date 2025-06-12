@@ -1,5 +1,6 @@
 import ccxt # type: ignore
 import pandas as pd
+import time
 
 def fetch_ohlcv_data(symbol, timeframe, limit=100):
     """
@@ -27,9 +28,7 @@ def fetch_historical_data(symbol: str, timeframe: str, since: int, max_candles: 
     """
     Récupère les données OHLCV historiques depuis une date donnée (timestamp en ms).
     """
-    import ccxt # type: ignore
-    import time
-    import pandas as pd
+    
 
     exchange = ccxt.binance()
     all_ohlcv = []

@@ -28,7 +28,7 @@ Algorithme de swing trading basé sur une stratégie de **mean reversion** (reto
 ## Stratégie de trading
 
 - **Type** : Mean Reversion en swing trading, pour capturer des profits sur la volatilité.  
-- **Positions** : une position à la fois (possibilité d’évolution vers pyramidal inversé).  
+- **Position** : Une position à la fois (possibilité d’évolution vers pyramidal inversé).  
 - **Approche conservatrice** :  
   - Vente si marché suracheté, achat si survendu.  
   - **Critères combinés (2/3 nécessaires pour buy/sell)** :  
@@ -61,6 +61,10 @@ Algorithme de swing trading basé sur une stratégie de **mean reversion** (reto
 
 ## À venir / améliorations
 
+- Mettre photo comparaison buy & hold 
+- Tester un choix de crypto sur une periode differente du backtest de la strategie pour moins de biais
+
+- Portefeuille mutualisé avec pondération adaptée à la performance des cryptos.  
 - Intégration des canaux de Keltner.  
 - Ajout du MACD comme indicateur.  
 - Prise en compte du volume dans la stratégie.  

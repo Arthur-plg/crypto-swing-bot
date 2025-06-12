@@ -49,7 +49,35 @@ def main():
 
     print("\n=== Résultats du backtest multi-actif ===")
     print(f"📈 Capital final : {results['equity'].iloc[-1]:.2f} USD")
-    plot_equity_curve(results)
+
+    # Comparaison Buy & Hold
+    
+    buy_hold_equity = None  # cumul de l'équity passive
+
+    for symbol, content in historical_data_dict.items():
+        df = content["df"].copy()
+        weight = content["weight"]
+
+        df["timestamp"] = pd.to_datetime(df["timestamp"])
+        df.set_index("timestamp", inplace=True)
+
+        # Représente le capital investi initialement dans cet actif
+        capital_initial = initial_balance * weight
+        price_initial = df["close"].iloc[0]
+
+        # Simule la valeur de l'investissement dans le temps
+        df["equity"] = capital_initial * df["close"] / price_initial
+
+        if buy_hold_equity is None:
+            buy_hold_equity = df[["equity"]].copy()
+        else:
+            buy_hold_equity = buy_hold_equity.join(df["equity"], how="outer", rsuffix=f"_{symbol}")
+
+    # Somme des capitalisations pondérées dans le temps
+    buy_hold_equity["equity_total"] = buy_hold_equity.sum(axis=1)
+    buy_hold_equity.reset_index(inplace=True)
+    df1 = buy_hold_equity[["timestamp", "equity_total"]].rename(columns={"equity_total": "equity"})
+    plot_equity_curve(results,df1)
 
     
 if __name__ == "__main__":

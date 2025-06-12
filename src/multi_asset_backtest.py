@@ -1,9 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt # type: ignore
 
-def plot_equity_curve(df):
+def plot_equity_curve(df,df1):
     plt.figure(figsize=(10, 5))
-    plt.plot(pd.to_datetime(df["timestamp"]), df["equity"], label="Capital")
+    plt.plot(pd.to_datetime(df["timestamp"]), df["equity"], label="Capital") 
+    plt.plot(pd.to_datetime(df1["timestamp"]), df1["equity"], label="Buy & Hold", linestyle="--")   # Comparaison Buy & Hold
     plt.title("Évolution du capital (multi-actif)")
     plt.xlabel("Date")
     plt.ylabel("Capital (USD)")
