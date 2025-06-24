@@ -1,6 +1,7 @@
 # Crypto Swing Bot
 
 Algorithme de swing trading basé sur une stratégie de **mean reversion** (retour à la moyenne) sur cryptomonnaies.
+Comparaison de l'évolution du PnL entre ma stratégie et une stratégie Buy&Hold dans le dossier image.
 
 ---
 
